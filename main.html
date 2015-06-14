@@ -8,15 +8,22 @@
         <td>Description</td>
         <td>Price</td>
         <td>Bought?</td>
+        <td>Action</td>
       </tr>
       <tr ng-repeat="item in items">
         <td>{{ item.name }}</td>
         <td>{{ item.description }}</td>
         <td>{{ item.price }}</td>
         <td> <input type="checkbox" ng-model="item.bought"> </td>
+        <td> <button> Delete </button> </td>
       </tr>
-
     </table>
+
+    <input type="text" placeholder="Item Name" ng-model="newItem.name"/>
+    <input type="text" placeholder="Description" ng-model="newItem.description"/>
+    <input type="text" placeholder="Price" ng-model="newItem.price"/>
+
+    <button>Add to List</button>
 
     <script src="js/angular.js"></script>
     <script src="js/app.js"></script>
