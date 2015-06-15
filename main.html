@@ -14,8 +14,8 @@
         <td>{{ item.name }}</td>
         <td>{{ item.description }}</td>
         <td>{{ item.price }}</td>
-        <td> <input type="checkbox" ng-model="item.bought"> </td>
-        <td> <button> Delete </button> </td>
+        <td> <input type="checkbox" ng-model="item.bought" ng-change="toggleBought(item)"> </td>
+        <td> <button ng-click="deleteItem(item)"> Delete </button> </td>
       </tr>
     </table>
 
@@ -23,7 +23,7 @@
     <input type="text" placeholder="Description" ng-model="newItem.description"/>
     <input type="text" placeholder="Price" ng-model="newItem.price"/>
 
-    <button>Add to List</button>
+    <button ng-click="addItem()">Add to List</button>
 
     <script src="js/angular.js"></script>
     <script src="js/app.js"></script>
