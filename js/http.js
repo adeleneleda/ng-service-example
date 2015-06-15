@@ -1,4 +1,3 @@
-// Without use of $http
 var app = angular.module('ShoppingListApp', []);
 
 app.controller('MainCtrl', ['$scope', 'ItemService', function($scope, ItemService) {
@@ -23,12 +22,11 @@ app.factory('ItemService', [function() {
   ];
 
   factory.addItem = function(item) {
-    factory.list.push(item);
+    alert('add item');
   };
 
   factory.deleteItem = function(item) {
-    index = factory.list.indexOf(item);
-    factory.list.splice(index, 1);
+    alert('delete item');
   };
 
   return factory;
